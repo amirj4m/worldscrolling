@@ -36,7 +36,7 @@ docs/screenshots/          Desktop + mobile screenshots of v1
 | 3 | **Email** | `assets/js/config.js` → `email` | ✅ Set to `amirj4m@gmail.com`. |
 | 4 | **Your photo** | `index.html`, search `TODO(jam): PHOTO` | Save it as `assets/img/jam.jpg` (4:5 portrait, about 800×1000, under 200KB) and swap the placeholder div for the `<img>` tag given in the comment. |
 | 5 | **Your bio + fun facts** | `index.html`, search `TODO(jam): BIO` | Replace the `[bracketed]` text, then delete `class="ph"` (that removes the dashed orange outline). Your display name "jam" in the heading is also marked. |
-| 6 | **3–5 hidden spots** | `index.html`, search `TODO(jam): SPOT` | For each card, fill in the name, neighbourhood and one-liner, and add a photo in `assets/img/spots/` (4:3, about 800×600). Copy a card block to add a 5th. |
+| 6 | **Hidden Athens mood photos + captions** (×4) | `index.html`, search `TODO(jam): MOOD` | Not named spots: sell the *feeling*. For each card, add a raw landscape photo in `assets/img/mood/` (3:2, about 1200×800), optionally swap the heading, and write a 1–2 line caption. |
 | 7 | Reviews | `index.html`, section `#social` | Replace the dashed placeholder cards with real reviews as they come in. |
 
 **Tip:** anything on the page with a **dashed orange outline** is placeholder text.
