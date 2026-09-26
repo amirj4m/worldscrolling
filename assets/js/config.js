@@ -13,15 +13,15 @@ window.WS_CONFIG = {
   // Launch city (used in WhatsApp pre-filled messages).
   city: "Athens",
 
-  // TODO(jam): your WhatsApp number — international format, DIGITS ONLY,
+  // WhatsApp number — international format, DIGITS ONLY,
   // no "+", no spaces, no leading zeros. e.g. Greek mobile: "306912345678"
-  whatsappNumber: "00000000000",
+  whatsappNumber: "306975720023",
 
   // Pre-filled text when someone taps a WhatsApp button.
   whatsappMessage: "Hey! I found worldscrolling and I'm planning a trip to Athens 👋",
 
-  // TODO(jam): your public contact email.
-  email: "hello@worldscrolling.com",
+  // Public contact email.
+  email: "amirj4m@gmail.com",
 
   // Instagram handle (no @).
   instagram: "worldscrolling",

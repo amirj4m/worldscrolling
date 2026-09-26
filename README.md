@@ -31,9 +31,9 @@ docs/screenshots/          Desktop + mobile screenshots of v1
 
 | # | What | Where | How |
 |---|------|-------|-----|
-| 1 | **WhatsApp number** | `assets/js/config.js` → `whatsappNumber` | International format, digits only, e.g. `306912345678`. Currently `00000000000`. |
+| 1 | **WhatsApp number** | `assets/js/config.js` → `whatsappNumber` | ✅ Set to `306975720023`. International format, digits only. |
 | 2 | **Stripe Payment Links** (×3) | `assets/js/config.js` → `stripe.map`, `stripe.friend`, `stripe.night` | Replace `#STRIPE_MAP`, `#STRIPE_FRIEND`, `#STRIPE_NIGHT` with your `https://buy.stripe.com/...` links. Until then, the buttons do nothing when clicked. |
-| 3 | **Email** | `assets/js/config.js` → `email` | Currently `hello@worldscrolling.com`, which is a guess. Change it if you use a different address. |
+| 3 | **Email** | `assets/js/config.js` → `email` | ✅ Set to `amirj4m@gmail.com`. |
 | 4 | **Your photo** | `index.html`, search `TODO(jam): PHOTO` | Save it as `assets/img/jam.jpg` (4:5 portrait, about 800×1000, under 200KB) and swap the placeholder div for the `<img>` tag given in the comment. |
 | 5 | **Your bio + fun facts** | `index.html`, search `TODO(jam): BIO` | Replace the `[bracketed]` text, then delete `class="ph"` (that removes the dashed orange outline). Your display name "jam" in the heading is also marked. |
 | 6 | **3–5 hidden spots** | `index.html`, search `TODO(jam): SPOT` | For each card, fill in the name, neighbourhood and one-liner, and add a photo in `assets/img/spots/` (4:3, about 800×600). Copy a card block to add a 5th. |
@@ -41,7 +41,7 @@ docs/screenshots/          Desktop + mobile screenshots of v1
 
 **Tip:** anything on the page with a **dashed orange outline** is placeholder text.
 
-A project-wide find for `TODO(jam)`, `STRIPE_`, or `00000000000` shows every spot to change.
+A project-wide find for `TODO(jam)` or `STRIPE_` shows every spot still to change.
 
 ## Run locally
 
