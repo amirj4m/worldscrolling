@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Page not found | worldscrolling</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- 404 is served at any URL depth, so relative links need a base.
+       On GitHub Project Pages (user.github.io/repo/) the base is /repo/; on a custom domain it's /. -->
+  <script>
+    (function () {
+      var p = location.pathname.split("/")[1];
+      var base = /\.github\.io$/.test(location.hostname) && p ? "/" + p + "/" : "/";
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <main class="hero">
@@ -14,7 +23,7 @@
       <span class="pill"><span class="dot" aria-hidden="true"></span>404</span>
       <h1>You scrolled a bit <span class="hl">too far.</span></h1>
       <p class="sub">This page doesn't exist — but the city does.</p>
-      <div class="cta-row"><a class="btn btn--lime" href="/">Back to worldscrolling</a></div>
+      <div class="cta-row"><a class="btn btn--lime" href="./">Back to worldscrolling</a></div>
     </div>
   </main>
 </body>

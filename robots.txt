@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /blog/article-template.html
-Disallow: /docs/
+Disallow: /worldscrolling/blog/article-template.html
+Disallow: /worldscrolling/docs/
 
-Sitemap: https://worldscrolling.com/sitemap.xml
+Sitemap: https://amirj4m.github.io/worldscrolling/sitemap.xml

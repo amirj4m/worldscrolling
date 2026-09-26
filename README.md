@@ -46,11 +46,19 @@ python -m http.server 8080
 # open http://localhost:8080
 ```
 
-## Deploy (later)
+## Hosting
 
-It's fully static, so no build command is needed and the output directory is the repo root.
-- **Vercel:** import the repo and set Framework Preset to "Other".
-- **Cloudflare Pages:** connect the repo, leave the build command empty, set the output directory to `/`.
+**Live now on GitHub Pages:** https://amirj4m.github.io/worldscrolling/ (published from the `master` branch, root folder).
+
+- All asset links are **relative** (`assets/...`, `../assets/...`), so the site works both at the `/worldscrolling/` subpath and at a root domain later. Don't add links that start with `/`.
+- `404.html` works out its own base path, so it renders correctly at any URL depth.
+- `.nojekyll` tells GitHub Pages to serve the files as-is, without running Jekyll.
+
+### Moving to worldscrolling.com later
+The canonical, Open Graph, structured-data, sitemap and robots URLs have to be absolute, so for now they point at the GitHub Pages URL. When the domain is connected:
+1. Replace `https://amirj4m.github.io/worldscrolling/` with `https://worldscrolling.com/` in every file except `README.md`.
+2. In `robots.txt`, drop the `/worldscrolling` prefix from the `Disallow` lines.
+3. Add a `CNAME` file containing `worldscrolling.com`, or deploy to Vercel or Cloudflare Pages instead. It's fully static: no build command, and the output directory is the repo root.
 
 ## Regenerating the OG image
 
