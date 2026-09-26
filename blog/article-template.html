@@ -1,0 +1,88 @@
+<!doctype html>
+<!--
+  BLOG ARTICLE TEMPLATE
+  Copy to blog/<post-slug>/index.html. Because the copy sits one folder deeper,
+  change every "../" below to "../../". Then fill in every [BRACKETED] value,
+  remove the noindex line, and add the URL to /sitemap.xml.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex"><!-- REMOVE when publishing -->
+  <title>[Post title — include "Athens" + the main keyword] | worldscrolling</title>
+  <meta name="description" content="[~150 characters summarising the post for Google]">
+  <link rel="canonical" href="https://worldscrolling.com/blog/[post-slug]/">
+  <meta name="theme-color" content="#16120f">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="worldscrolling">
+  <meta property="og:title" content="[Post title]">
+  <meta property="og:description" content="[Short summary]">
+  <meta property="og:url" content="https://worldscrolling.com/blog/[post-slug]/">
+  <meta property="og:image" content="https://worldscrolling.com/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "[Post title]",
+    "description": "[Short summary]",
+    "datePublished": "[YYYY-MM-DD]",
+    "author": { "@type": "Person", "name": "[jam]" },
+    "publisher": { "@type": "Organization", "name": "worldscrolling", "url": "https://worldscrolling.com/" },
+    "mainEntityOfPage": "https://worldscrolling.com/blog/[post-slug]/"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../">worldscrolling</a>
+      <nav class="nav" aria-label="Main">
+        <a href="../#packages">Packages</a>
+        <a href="../blog/">Blog</a>
+      </nav>
+      <a class="btn btn--lime btn--sm" href="../#packages">Plan my trip</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="article">
+      <span class="eyebrow">[Category, e.g. Food]</span>
+      <h1>[Post title]</h1>
+      <p class="meta">By [jam] · <time datetime="[YYYY-MM-DD]">[26 September 2026]</time> · [5] min read</p>
+
+      <p>[Intro paragraph — hook the reader, say what they'll get.]</p>
+
+      <h2>[Section heading]</h2>
+      <p>[Body text.]</p>
+
+      <h2>[Section heading]</h2>
+      <p>[Body text.]</p>
+
+      <aside class="article-cta">
+        <strong>Want the full map?</strong>
+        <p>Get a personalised plan of the spots locals actually love — plus 24/7 WhatsApp help.</p>
+        <a class="btn btn--ink" href="../#packages">See packages</a>
+      </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="legal">
+        <span>© <span id="year">2026</span> worldscrolling. All rights reserved.</span>
+        <span><a href="../">worldscrolling.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

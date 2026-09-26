@@ -1,0 +1,466 @@
+<!doctype html>
+<!--
+  ==========================================================================
+  worldscrolling — landing page
+  ==========================================================================
+  👋 jam — WHERE TO EDIT THINGS
+
+  1. LINKS & CONTACT (WhatsApp number, email, Stripe payment links, Instagram)
+     → assets/js/config.js   (one file, clearly commented — edit only that)
+
+  2. YOUR PHOTO + BIO
+     → search this file for  TODO(jam): PHOTO  and  TODO(jam): BIO
+
+  3. YOUR 3–5 HIDDEN SPOTS (names, neighbourhoods, one-liners, photos)
+     → search this file for  TODO(jam): SPOT
+
+  4. SOCIAL SHARE IMAGE (optional)
+     → replace assets/img/og-image.png (1200×630)
+
+  Anything with a dashed orange outline on the page = placeholder text.
+  Remove class="ph" once you've replaced it.
+  ==========================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>worldscrolling — Your local friend in Athens | Hidden spots, food, bars & 24/7 WhatsApp help</title>
+  <meta name="description" content="Don't scroll the screen. Scroll the world. A local friend who shows you the real Athens — the food, bars, viewpoints and hidden gems locals actually love — plus 24/7 WhatsApp help. Plans from €39 per trip.">
+  <link rel="canonical" href="https://worldscrolling.com/">
+  <meta name="theme-color" content="#16120f">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="worldscrolling">
+  <meta property="og:title" content="worldscrolling — Don't scroll the screen. Scroll the world.">
+  <meta property="og:description" content="Your local friend in Athens: the spots locals actually love + 24/7 WhatsApp help. Not a history tour.">
+  <meta property="og:url" content="https://worldscrolling.com/">
+  <meta property="og:image" content="https://worldscrolling.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="worldscrolling — Don't scroll the screen. Scroll the world.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="worldscrolling — Don't scroll the screen. Scroll the world.">
+  <meta name="twitter:description" content="Your local friend in Athens: the spots locals actually love + 24/7 WhatsApp help.">
+  <meta name="twitter:image" content="https://worldscrolling.com/assets/img/og-image.png">
+
+  <!-- Icons (placeholder mark — swap when there's a final logo) -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Structured data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TravelAgency",
+        "@id": "https://worldscrolling.com/#business",
+        "name": "worldscrolling",
+        "slogan": "Don't scroll the screen. Scroll the world.",
+        "description": "A local friend who shows travellers the real city — food, bars, viewpoints and hidden gems locals love — plus 24/7 WhatsApp help.",
+        "url": "https://worldscrolling.com/",
+        "image": "https://worldscrolling.com/assets/img/og-image.png",
+        "areaServed": { "@type": "City", "name": "Athens" },
+        "sameAs": ["https://www.instagram.com/worldscrolling/"],
+        "priceRange": "€39–€149",
+        "makesOffer": [
+          { "@type": "Offer", "name": "The Map", "price": "39", "priceCurrency": "EUR" },
+          { "@type": "Offer", "name": "Local Friend on Call", "price": "99", "priceCurrency": "EUR" },
+          { "@type": "Offer", "name": "A Night Out With a Local", "price": "149", "priceCurrency": "EUR" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is this a historical tour?", "acceptedAnswer": { "@type": "Answer", "text": "Nope. The Acropolis is great and you'll find it without us. worldscrolling is about the places locals actually hang out: food, bars, viewpoints and hidden gems." } },
+          { "@type": "Question", "name": "Is it a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every package is a one-off payment per trip." } },
+          { "@type": "Question", "name": "How does the WhatsApp help work?", "acceptedAnswer": { "@type": "Answer", "text": "You get a direct WhatsApp line to your local. Ask anything — where to eat right now, how to get somewhere, what to do tonight. On Local Friend on Call and above, it's a true 24/7 concierge during your trip." } },
+          { "@type": "Question", "name": "When do I get my plan?", "acceptedAnswer": { "@type": "Answer", "text": "Before your trip. Tell us your dates and vibe, and your personalised plan and map land in your inbox and WhatsApp ahead of arrival." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Inline icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#d8ff3c"/><circle cx="32" cy="32" r="18" fill="#16120f"/><path d="M14 32h36M32 14c-6 5-8 11-8 18s2 13 8 18c6-5 8-11 8-18s-2-13-8-18z" fill="none" stroke="#d8ff3c" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2.8a9.2 9.2 0 0 0-7.9 13.9L3 21l4.4-1.1A9.2 9.2 0 1 0 12 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.2 7.8c.3 0 .6 0 .8.5l.7 1.7c.1.3 0 .5-.1.7l-.6.7c.6 1.3 1.6 2.3 2.9 2.9l.7-.6c.2-.2.5-.2.7-.1l1.7.7c.4.2.5.5.5.8 0 1.2-1 2-2.2 2-3.4-.3-6.4-3.3-6.7-6.7 0-1.3.9-2.4 1.6-2.4z" fill="currentColor"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="#top" aria-label="worldscrolling home"><svg aria-hidden="true"><use href="#i-logo"/></svg>worldscrolling</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#packages">Packages</a>
+        <a href="#hidden">Hidden Athens</a>
+        <a href="blog/">Blog</a>
+      </nav>
+      <a class="btn btn--lime btn--sm" href="#packages">Plan my trip</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div>
+          <span class="pill"><span class="dot" aria-hidden="true"></span>Now live in Athens · more cities soon</span>
+          <h1>Don't scroll the <span class="strike">screen</span>. <span class="hl">Scroll the world.</span></h1>
+          <p class="sub">Your local friend who shows you the real Athens — <strong>the spots locals actually love.</strong> Food, bars, viewpoints, hidden gems + 24/7 WhatsApp help.</p>
+          <div class="cta-row">
+            <a class="btn btn--lime" href="#packages">Plan my trip <svg aria-hidden="true"><use href="#i-down"/></svg></a>
+            <a class="btn btn--wa" data-link="whatsapp" href="https://wa.me/00000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
+          </div>
+          <p class="micro">No tour groups. No history lectures. No 40-minute queue for the "hidden" spot from page one of Google.</p>
+        </div>
+
+        <div class="phone-wrap" aria-hidden="true">
+          <span class="sticker sticker--a">touch grass 🌿</span>
+          <span class="sticker sticker--b">IRL &gt; FYP</span>
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-toast"><span>📵</span><span>Screen time today: <b>0h 12m</b><br>You were busy living. Nice.</span></div>
+              <div class="feed">
+                <div class="post"><div class="post-img g1">🌇</div><div class="post-meta"><b>Rooftop at golden hour</b><small>📍 no queue, no dress code</small></div></div>
+                <div class="post"><div class="post-img g2">🥙</div><div class="post-meta"><b>Souvlaki, 2am, zero regrets</b><small>📍 where the taxi drivers eat</small></div></div>
+                <div class="post"><div class="post-img g3">🌊</div><div class="post-meta"><b>Sunset swim, 30 min out</b><small>📍 locals only (and now you)</small></div></div>
+                <div class="post"><div class="post-img g4">🍷</div><div class="post-meta"><b>Wine bar with 12 seats</b><small>📍 ask for the orange one</small></div></div>
+                <div class="post"><div class="post-img g5">🎶</div><div class="post-meta"><b>Vinyl bar, no sign outside</b><small>📍 knock twice</small></div></div>
+                <!-- duplicated for seamless loop -->
+                <div class="post"><div class="post-img g1">🌇</div><div class="post-meta"><b>Rooftop at golden hour</b><small>📍 no queue, no dress code</small></div></div>
+                <div class="post"><div class="post-img g2">🥙</div><div class="post-meta"><b>Souvlaki, 2am, zero regrets</b><small>📍 where the taxi drivers eat</small></div></div>
+                <div class="post"><div class="post-img g3">🌊</div><div class="post-meta"><b>Sunset swim, 30 min out</b><small>📍 locals only (and now you)</small></div></div>
+                <div class="post"><div class="post-img g4">🍷</div><div class="post-meta"><b>Wine bar with 12 seats</b><small>📍 ask for the orange one</small></div></div>
+                <div class="post"><div class="post-img g5">🎶</div><div class="post-meta"><b>Vinyl bar, no sign outside</b><small>📍 knock twice</small></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Rooftop bars</span><span>2am souvlaki</span><span>Secret viewpoints</span><span>No museums required</span><span>Touch grass</span><span>Tavernas with no English menu</span><span>Sunset swims</span><span>Real life &gt; reels</span>
+        <span>Rooftop bars</span><span>2am souvlaki</span><span>Secret viewpoints</span><span>No museums required</span><span>Touch grass</span><span>Tavernas with no English menu</span><span>Sunset swims</span><span>Real life &gt; reels</span>
+      </div>
+    </div>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="head">
+          <span class="eyebrow">How it works</span>
+          <h2 id="how-title">Three steps. Zero doom-scrolling.</h2>
+          <p class="lede">Skip the 47 open tabs and the "top 10" lists everyone else is following. Get a friend in the city instead.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3>Tell me your dates &amp; vibe</h3>
+            <p>Foodie? Night owl? Sunset chaser? Travelling solo or with the crew? A quick chat and I get what you're into.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3>I hand you the plan</h3>
+            <p>A personalised plan + a curated map of the spots locals actually go to, in your pocket before you land.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3>I'm on WhatsApp — or right there with you</h3>
+            <p>Lost, hungry or bored at 1am? Message me. Want the full experience? I'll take you out for the night.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= PACKAGES ================= -->
+    <section class="section packages" id="packages" aria-labelledby="packages-title">
+      <div class="wrap">
+        <div class="head">
+          <span class="eyebrow">Packages</span>
+          <h2 id="packages-title">Pick your level of local.</h2>
+          <p class="lede">One-off price per trip. Not a subscription. Not a history tour.</p>
+        </div>
+
+        <p class="promo"><span class="tag">Launch deal</span> First 10 travellers get 50% off — in exchange for an honest review.</p>
+
+        <div class="plans">
+          <!-- Tier 1 -->
+          <article class="plan">
+            <div class="plan-emoji" aria-hidden="true">🗺️</div>
+            <h3>The Map</h3>
+            <p class="tagline">For the self-starters who just want the good stuff.</p>
+            <p class="price"><b>€39</b><span>/ trip</span></p>
+            <span class="launch">€19.50 for the first 10</span>
+            <ul class="features">
+              <li>Personalised digital plan built around your dates &amp; vibe</li>
+              <li>Curated map of cool spots — food, bars, viewpoints, hidden gems</li>
+              <li>Delivered before your trip</li>
+              <li>WhatsApp Q&amp;A</li>
+            </ul>
+            <!-- TODO(jam): Stripe link lives in assets/js/config.js → stripe.map -->
+            <a class="btn btn--ink btn--block" data-link="stripe-map" href="#STRIPE_MAP">Get The Map</a>
+          </article>
+
+          <!-- Tier 2 -->
+          <article class="plan plan--hot">
+            <span class="plan-badge">Most popular</span>
+            <div class="plan-emoji" aria-hidden="true">📲</div>
+            <h3>Local Friend on Call</h3>
+            <p class="tagline">Like having a local best friend in your pocket.</p>
+            <p class="price"><b>€99</b><span>/ trip</span></p>
+            <span class="launch">€49.50 for the first 10</span>
+            <ul class="features">
+              <li class="plus">Everything in The Map, plus:</li>
+              <li>True 24/7 WhatsApp concierge during your trip</li>
+              <li>Real-time recs: "where do I eat <em>right now</em>?"</li>
+              <li>Help arranging bookings &amp; car rental</li>
+            </ul>
+            <!-- TODO(jam): Stripe link lives in assets/js/config.js → stripe.friend -->
+            <a class="btn btn--ink btn--block" data-link="stripe-friend" href="#STRIPE_FRIEND">Get my local friend</a>
+          </article>
+
+          <!-- Tier 3 -->
+          <article class="plan">
+            <div class="plan-emoji" aria-hidden="true">🌙</div>
+            <h3>A Night Out With a Local</h3>
+            <p class="tagline">The full experience. I show you around, in person.</p>
+            <p class="price"><b>€149</b><span>/ trip</span></p>
+            <span class="launch">€74.50 for the first 10</span>
+            <ul class="features">
+              <li class="plus">Everything in Local Friend on Call, plus:</li>
+              <li>I personally host you for an evening</li>
+              <li>The best spots, in the right order, at the right time</li>
+              <li>A friend's night out — not a tour, no history lecture</li>
+            </ul>
+            <!-- TODO(jam): Stripe link lives in assets/js/config.js → stripe.night -->
+            <a class="btn btn--sun btn--block" data-link="stripe-night" href="#STRIPE_NIGHT">Book my night out</a>
+          </article>
+        </div>
+
+        <p class="plans-note">Not sure which one? <a data-link="whatsapp" data-wa-text="Hey! Not sure which worldscrolling package fits my trip — can you help?" href="https://wa.me/00000000000" target="_blank" rel="noopener">Ask me on WhatsApp</a> — no pressure.</p>
+      </div>
+    </section>
+
+    <!-- ================= MEET YOUR LOCAL ================= -->
+    <section class="section" id="local" aria-labelledby="local-title">
+      <div class="wrap local">
+        <!-- TODO(jam): PHOTO — replace the placeholder div's contents with:
+             <img src="assets/img/jam.jpg" alt="jam, your local host in Athens" width="800" height="1000" loading="lazy">
+             (portrait 4:5, ~800×1000px, compressed JPG/WebP under ~200KB) -->
+        <div class="local-photo">
+          <div class="ph-block"><span class="big" aria-hidden="true">📸</span>Your photo goes here<br><code>assets/img/jam.jpg · 4:5 portrait</code></div>
+        </div>
+
+        <div>
+          <span class="eyebrow">Meet your local</span>
+          <h2 id="local-title">Hey, I'm <span class="ph">jam</span> 👋</h2>
+          <!-- TODO(jam): BIO — replace the text inside class="ph" spans, then delete class="ph" -->
+          <div class="local-bio">
+            <p class="ph">[2–3 sentences: how long you've lived in Athens, what you love about it, and why you started worldscrolling.]</p>
+            <p class="ph">[1 sentence on your vibe: e.g. "I'm the friend who always knows where to go next."]</p>
+          </div>
+          <ul class="facts">
+            <li><span class="ph">[X]</span> years in Athens</li>
+            <li>Fave hood: <span class="ph">[___]</span></li>
+            <li>Go-to order: <span class="ph">[___]</span></li>
+            <li>Speaks: <span class="ph">[EN, EL, …]</span></li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn--wa" data-link="whatsapp" href="https://wa.me/00000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Say hi on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HIDDEN CITY TEASER ================= -->
+    <section class="section hidden" id="hidden" aria-labelledby="hidden-title">
+      <div class="wrap">
+        <div class="head">
+          <span class="eyebrow">Hidden Athens</span>
+          <h2 id="hidden-title">A little taste of the map.</h2>
+          <p class="lede">A few favourites to prove the point. The rest are in your plan 😉</p>
+        </div>
+
+        <!-- TODO(jam): SPOT cards (3–5). For each: category tag, name, neighbourhood, one-liner, photo.
+             Photo: replace the emoji with
+             <img src="assets/img/spots/NAME.jpg" alt="DESCRIBE THE PHOTO" width="800" height="600" loading="lazy">
+             (landscape 4:3, ~800×600px). Delete the ph-label once the real photo is in.
+             To add a 5th card, copy one <article class="spot">…</article> block. -->
+        <div class="spots">
+          <article class="spot">
+            <div class="spot-img g2"><span class="spot-tag">Food</span><span aria-hidden="true">🥙</span><span class="ph-label">Photo placeholder</span></div>
+            <div class="spot-body">
+              <h3 class="ph">[Spot name]</h3>
+              <p class="where">📍 <span class="ph">[Neighbourhood]</span></p>
+              <p class="ph">[One line on why locals love it.]</p>
+            </div>
+          </article>
+          <article class="spot">
+            <div class="spot-img g4"><span class="spot-tag">Bar</span><span aria-hidden="true">🍸</span><span class="ph-label">Photo placeholder</span></div>
+            <div class="spot-body">
+              <h3 class="ph">[Spot name]</h3>
+              <p class="where">📍 <span class="ph">[Neighbourhood]</span></p>
+              <p class="ph">[One line on why locals love it.]</p>
+            </div>
+          </article>
+          <article class="spot">
+            <div class="spot-img g1"><span class="spot-tag">Viewpoint</span><span aria-hidden="true">🌅</span><span class="ph-label">Photo placeholder</span></div>
+            <div class="spot-body">
+              <h3 class="ph">[Spot name]</h3>
+              <p class="where">📍 <span class="ph">[Neighbourhood]</span></p>
+              <p class="ph">[One line on why locals love it.]</p>
+            </div>
+          </article>
+          <article class="spot">
+            <div class="spot-img g3"><span class="spot-tag">Hidden gem</span><span aria-hidden="true">💎</span><span class="ph-label">Photo placeholder</span></div>
+            <div class="spot-body">
+              <h3 class="ph">[Spot name]</h3>
+              <p class="where">📍 <span class="ph">[Neighbourhood]</span></p>
+              <p class="ph">[One line on why locals love it.]</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="spots-foot">Want the rest? <a href="#packages">Grab The Map →</a></p>
+      </div>
+    </section>
+
+    <!-- ================= TRUST / SOCIAL ================= -->
+    <section class="section" id="social" aria-labelledby="social-title">
+      <div class="wrap">
+        <div class="head">
+          <span class="eyebrow">The feed worth following</span>
+          <h2 id="social-title">Scroll with us (then go outside).</h2>
+        </div>
+        <div class="trust">
+          <!-- Instagram. To embed real posts later, paste Instagram's official embed code in place of .ig-grid -->
+          <div class="ig-card">
+            <h3>@worldscrolling</h3>
+            <p>Spots, sunsets and the occasional 2am souvlaki review. Real places, real people, zero sponsored nonsense.</p>
+            <div class="ig-grid" aria-hidden="true">
+              <div class="g1">🌇</div><div class="g2">🍋</div><div class="g3">⛵</div>
+              <div class="g4">🍷</div><div class="g5">🐈</div><div class="g3">🌊</div>
+            </div>
+            <a class="btn btn--lime" data-link="instagram" href="https://www.instagram.com/worldscrolling/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Follow on Instagram</a>
+          </div>
+
+          <!-- Reviews. Replace the dashed placeholders with real reviews as they come in. -->
+          <div class="reviews">
+            <figure class="review">
+              <div class="stars" aria-hidden="true">☆☆☆☆☆</div>
+              <blockquote>"Your review will live here."</blockquote>
+              <figcaption><cite>— First traveller, somewhere in the world</cite></figcaption>
+            </figure>
+            <figure class="review">
+              <div class="stars" aria-hidden="true">☆☆☆☆☆</div>
+              <blockquote>"We're brand new — so these spots are still open."</blockquote>
+              <figcaption><cite>— Reviews coming soon</cite></figcaption>
+            </figure>
+            <figure class="review">
+              <div class="stars" aria-hidden="true">☆☆☆☆☆</div>
+              <blockquote>"Real reviews from real travellers, no fakes. Promise."</blockquote>
+              <figcaption><cite>— worldscrolling</cite></figcaption>
+            </figure>
+            <div class="review review--cta">
+              <b>Be one of the first 10 → get 50% off.</b>
+              <p>All we ask is an honest review after your trip.</p>
+              <a class="btn btn--ink btn--sm" href="#packages">Claim the launch deal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--tight" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="head head--center">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">Quick questions.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is this a historical tour?</summary>
+            <p>Nope. The Acropolis is great and you'll find it without us. worldscrolling is about the places locals actually hang out: food, bars, viewpoints and hidden gems.</p>
+          </details>
+          <details>
+            <summary>Is it a subscription?</summary>
+            <p>No. Every package is a one-off payment per trip.</p>
+          </details>
+          <details>
+            <summary>How does the WhatsApp help work?</summary>
+            <p>You get a direct WhatsApp line to your local. Ask anything — where to eat right now, how to get somewhere, what to do tonight. On Local Friend on Call and above, it's a true 24/7 concierge during your trip.</p>
+          </details>
+          <details>
+            <summary>When do I get my plan?</summary>
+            <p>Before your trip. Tell us your dates and vibe, and your personalised plan and map land in your inbox and WhatsApp ahead of arrival.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section final" aria-labelledby="final-title">
+      <div class="wrap">
+        <h2 id="final-title">Put the phone down. Pick up the city.</h2>
+        <p>Your feed will still be there when you get home. This sunset won't.</p>
+        <div class="cta-row">
+          <a class="btn btn--lime" href="#packages">Plan my trip</a>
+          <a class="btn btn--ink" data-link="whatsapp" href="https://wa.me/00000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="logo" href="#top"><svg aria-hidden="true"><use href="#i-logo"/></svg>worldscrolling</a>
+          <p class="tag">Don't scroll the screen. Scroll the world. Starting in Athens — more cities soon.</p>
+        </div>
+        <div class="foot-links">
+          <a data-link="instagram" href="https://www.instagram.com/worldscrolling/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@worldscrolling</a>
+          <a data-link="email" href="mailto:hello@worldscrolling.com"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-email-text>hello@worldscrolling.com</span></a>
+          <a data-link="whatsapp" href="https://wa.me/00000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        </div>
+        <div class="foot-links">
+          <a href="#how">How it works</a>
+          <a href="#packages">Packages</a>
+          <a href="blog/">Blog</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span id="year">2026</span> worldscrolling. All rights reserved.</span>
+        <span>Prices in EUR, per trip. worldscrolling.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fab" data-link="whatsapp" href="https://wa.me/00000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
