@@ -1,6 +1,11 @@
-<!-- PLACEHOLDER favicon — swap for a final logo mark when ready -->
+<!-- worldscrolling favicon — simplified wireframe globe + one bond, built to read at 16–32px -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#16120f"/>
-  <circle cx="32" cy="32" r="18" fill="#d8ff3c"/>
-  <path d="M14 32h36M32 14c-6 5-8 11-8 18s2 13 8 18c6-5 8-11 8-18s-2-13-8-18z" fill="none" stroke="#16120f" stroke-width="3.5" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="14" fill="#16120f"/>
+  <g fill="none" stroke="#d8ff3c" stroke-linecap="round">
+    <circle cx="28" cy="36" r="18" stroke-width="4.5"/>
+    <ellipse cx="28" cy="36" rx="7.5" ry="18" stroke-width="3.5"/>
+    <path d="M10 36h36" stroke-width="3.5"/>
+    <path d="M43.6 27L56 19.5" stroke-width="4.5"/>
+  </g>
+  <circle cx="56" cy="19.5" r="3.6" fill="#d8ff3c"/>
 </svg>

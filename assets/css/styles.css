@@ -82,11 +82,17 @@ figure { margin: 0; }
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
 .logo { display: inline-flex; align-items: center; gap: 9px; font-weight: 800; font-size: 20px; letter-spacing: -0.04em; text-decoration: none; }
-.logo svg { width: 30px; height: 30px; }
+.logo-mark { height: 36px; width: auto; flex: none; }
+.logo-word { transform: translateY(-1px); }
 .nav { display: none; gap: 26px; font-weight: 600; font-size: 15px; }
 .nav a { text-decoration: none; opacity: .8; }
 .nav a:hover { opacity: 1; color: var(--lime); }
-.site-header .btn { color: var(--ink); border-color: var(--lime); box-shadow: none; }
+.site-header .btn { color: var(--ink); border-color: var(--lime); box-shadow: none; white-space: nowrap; }
+@media (max-width: 420px) {
+  .logo { font-size: 18px; gap: 7px; }
+  .logo-mark { height: 28px; }
+  .site-header .btn--sm { padding: 0 14px; font-size: 14px; }
+}
 
 /* ---------- Hero ---------- */
 .hero { background: var(--ink); color: var(--paper); overflow: hidden; position: relative; }

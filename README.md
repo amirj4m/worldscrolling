@@ -10,13 +10,18 @@ Landing site for **worldscrolling**: a local friend who shows travellers the rea
 index.html                 Landing page (hero, how it works, packages, meet your local,
                            hidden spots, social/reviews, FAQ, footer)
 404.html                   Not-found page
-favicon.svg                Placeholder logo mark
+favicon.svg                Favicon: simplified lime wireframe globe + bond (reads at 16–32px)
 robots.txt, sitemap.xml    SEO basics (add blog posts to sitemap.xml as you publish)
 assets/css/styles.css      All styles (shared by landing + blog)
 assets/js/config.js        ⭐ SITE CONFIG: WhatsApp, email, Stripe links, Instagram
 assets/js/main.js          Applies config.js to every button/link
-assets/img/og-image.png    Social share image, 1200×630 (source: docs/og-image.html)
-assets/img/apple-touch-icon.png
+assets/img/logo-dark.jpg   jam's original logo, on black (master artwork)
+assets/img/logo-light.jpg  jam's original logo, on white (master artwork)
+assets/img/mark.svg        Vector version of the logo (globe + bond chain), lime on transparent, used in header/footer
+assets/img/mark-dark.svg   Same mark in dark ink, for light backgrounds
+assets/img/favicon-32.png  PNG favicon fallback
+assets/img/apple-touch-icon.png  180×180 home-screen icon
+assets/img/og-image.png    Social share image, 1200×630, uses logo-dark.jpg (source: docs/og-image.html)
 blog/index.html            Blog index ("coming soon" cards)
 blog/article-template.html Copy this for each new post (instructions inside)
 docs/screenshots/          Desktop + mobile screenshots of v1
@@ -33,7 +38,6 @@ docs/screenshots/          Desktop + mobile screenshots of v1
 | 5 | **Your bio + fun facts** | `index.html`, search `TODO(jam): BIO` | Replace the `[bracketed]` text, then delete `class="ph"` (that removes the dashed orange outline). Your display name "jam" in the heading is also marked. |
 | 6 | **3–5 hidden spots** | `index.html`, search `TODO(jam): SPOT` | For each card, fill in the name, neighbourhood and one-liner, and add a photo in `assets/img/spots/` (4:3, about 800×600). Copy a card block to add a 5th. |
 | 7 | Reviews | `index.html`, section `#social` | Replace the dashed placeholder cards with real reviews as they come in. |
-| 8 | Logo / favicon (optional) | `favicon.svg`, `assets/img/apple-touch-icon.png`, `assets/img/og-image.png` | These are placeholders built from the brand colours. |
 
 **Tip:** anything on the page with a **dashed orange outline** is placeholder text.
 

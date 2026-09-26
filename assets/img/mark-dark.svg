@@ -1,0 +1,12 @@
+<!-- worldscrolling mark — simplified vector of jam's logo (wireframe globe + molecule bond chain).
+     Transparent background, dark strokes, for light backgrounds. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 56" fill="none" stroke="#16120f" stroke-linecap="round" stroke-linejoin="round">
+  <!-- globe -->
+  <circle cx="24" cy="30" r="18" stroke-width="3"/>
+  <ellipse cx="24" cy="30" rx="8" ry="18" stroke-width="2"/>
+  <path d="M24 12v36M6 30h36M8.4 21q15.6 3 31.2 0M8.4 39q15.6-3 31.2 0" stroke-width="2"/>
+  <!-- HO bonds -->
+  <path d="M8.4 21L2 17.5M8.4 39L2 42.5" stroke-width="3"/>
+  <!-- chain -->
+  <path d="M39.6 21L52 13.5 64 21 76 13.5 88 21M52 13.5V4M64 21v9.5" stroke-width="3"/>
+</svg>
