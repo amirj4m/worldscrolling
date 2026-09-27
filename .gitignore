@@ -3,3 +3,7 @@
 Thumbs.db
 .vercel/
 .wrangler/
+
+# Original full-res photos (contain GPS EXIF) - publish only the resized copies
+assets/img/blog/boot-scraper.jpg
+assets/img/blog/boot-scraper-2.jpg

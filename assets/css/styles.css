@@ -370,6 +370,19 @@ figure { margin: 0; }
 .article p { margin-top: 16px; font-size: 18.5px; line-height: 1.65; }
 .article-cta { margin-top: 48px; background: var(--lime); border: 2px solid var(--ink); border-radius: var(--r-lg); padding: 26px; }
 .article-cta p { margin: 8px 0 18px; }
+.article .eyebrow + h1 { margin-top: 10px; }
+.article .lede { color: var(--ink); max-width: none; font-size: 22px; font-weight: 700; line-height: 1.4; margin-top: 28px; }
+.article-figure { margin: 32px 0 8px; }
+.article-figure img { width: 100%; height: auto; border: 2px solid var(--ink); border-radius: var(--r-lg); box-shadow: 0 6px 0 var(--ink); background: var(--paper-2); }
+.article-figure figcaption { margin-top: 14px; font-size: 14.5px; color: var(--muted); }
+.article-list { margin-top: 16px; display: grid; gap: 10px; }
+.article-list li { position: relative; padding-left: 26px; font-size: 18.5px; line-height: 1.6; }
+.article-list li::before { content: ""; position: absolute; left: 4px; top: .62em; width: 10px; height: 10px; border-radius: 50%; background: var(--sun); }
+.post-card--live { transition: transform .15s ease, box-shadow .15s ease; }
+.post-card--live:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--ink); }
+.post-card .tag { display: inline-block; font-size: 12.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--sea); margin-bottom: 10px; }
+.post-card--wide { grid-column: 1 / -1; }
+.post-card .post-meta { margin-top: 14px; font-size: 14px; color: var(--muted); }
 
 /* ---------- Breakpoints ---------- */
 @media (min-width: 640px) {
