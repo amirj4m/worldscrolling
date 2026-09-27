@@ -52,17 +52,13 @@ python -m http.server 8080
 
 ## Hosting
 
-**Live now on GitHub Pages:** https://amirj4m.github.io/worldscrolling/ (published from the `master` branch, root folder).
+**Custom domain:** https://worldscrolling.com. This is GitHub Pages from the `master` branch, root folder, with the `CNAME` file at the repo root. The fallback URL is https://amirj4m.github.io/worldscrolling/; once the custom domain is set, GitHub redirects it to worldscrolling.com.
 
-- All asset links are **relative** (`assets/...`, `../assets/...`), so the site works both at the `/worldscrolling/` subpath and at a root domain later. Don't add links that start with `/`.
-- `404.html` works out its own base path, so it renders correctly at any URL depth.
+- All asset links are **relative** (`assets/...`, `../assets/...`), so the site works on the custom domain and at the github.io `/worldscrolling/` subpath. Don't add links that start with `/`.
+- The canonical, Open Graph, Twitter, structured-data, sitemap and robots URLs are absolute and point at `https://worldscrolling.com/`. New blog posts should do the same (the article template already does).
+- `404.html` works out its own base path (`/` on the custom domain, `/worldscrolling/` on github.io), so it renders correctly at any URL depth.
 - `.nojekyll` tells GitHub Pages to serve the files as-is, without running Jekyll.
-
-### Moving to worldscrolling.com later
-The canonical, Open Graph, structured-data, sitemap and robots URLs have to be absolute, so for now they point at the GitHub Pages URL. When the domain is connected:
-1. Replace `https://amirj4m.github.io/worldscrolling/` with `https://worldscrolling.com/` in every file except `README.md`.
-2. In `robots.txt`, drop the `/worldscrolling` prefix from the `Disallow` lines.
-3. Add a `CNAME` file containing `worldscrolling.com`, or deploy to Vercel or Cloudflare Pages instead. It's fully static: no build command, and the output directory is the repo root.
+- DNS is managed at Namecheap: apex A/AAAA records point to GitHub Pages, and `www` is a CNAME to `amirj4m.github.io`. Turn on **Enforce HTTPS** in the repo's Settings → Pages once the certificate has been issued.
 
 ## Regenerating the OG image
 
